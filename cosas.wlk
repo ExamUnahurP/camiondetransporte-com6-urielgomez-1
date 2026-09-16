@@ -74,7 +74,7 @@ object contenedorPortuario {
         if(contenido.isEmpty()){
             return 0
         }else{
-        return contenido.max({c => c.peligrosidad()})
+        return contenido.max({c => c.peligrosidad()}).peligrosidad()
         }
     }
     method agregarContenido(unContenido){
@@ -94,7 +94,7 @@ object residuosRadioactivos {
     method peligrosidad() = 200
 }
 
-object embalajeDeSegurdad {
+object embalajeDeSeguridad {
     var objeto = khinghtRider
     method peso() = objeto.peso()
     method cambiarObjeto(unObjeto){ objeto = unObjeto}
