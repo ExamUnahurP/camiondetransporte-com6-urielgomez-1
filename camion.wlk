@@ -19,7 +19,7 @@ object camion {
     method primeraCargaConPeligrosidad(unaPeligrosidad){
         return carga.find({c => c.peligrosidad() == unaPeligrosidad})
     }
-    method nivelDePeligrosidadMayorA(unaPeligrosidad){
-        return carga.filter({c => c.peligrosidad() > unaPeligrosidad})}
+
+    method a(u) = carga.filter({c => c.peligrosidad() > u})
 
 }
