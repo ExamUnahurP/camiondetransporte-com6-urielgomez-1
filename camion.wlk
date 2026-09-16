@@ -10,11 +10,13 @@ object camion {
         }
     }
     method todasLasCosasCargadasSonPares(){
-        if(carga.any({c => c.peso().odd})){
-            return false
-        }
-        else {
-            return true
-        }
+       return !carga.any({c => c.peso().odd()})
+
+    }
+    method contieneCosaConPeso(unPeso){
+        return carga.any({c => c.peso() == unPeso})
+    }
+    method primeraCargaConPeligrosidad(unaPeligrosidad){
+        return carga.find({c => c.peligrosidad() == unaPeligrosidad})
     }
 }
