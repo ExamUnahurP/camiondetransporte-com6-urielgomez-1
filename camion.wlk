@@ -28,4 +28,8 @@ object camion {
         return carga.filter({c => c.peligrosidad() > unObjeto.peligrosidad()})
     }
 
+    method estaExcedido () {
+        return camion.sum({c => c.peso({}}) > 2500 
+    }
+
 }

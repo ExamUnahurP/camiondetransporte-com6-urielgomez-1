@@ -56,13 +56,14 @@ object bateriaAntiaerea {
         } else {
             return 0
         }
+    }
     method cambiarEstadoMisiles(){
         if(tieneMisiles){
             tieneMisiles = false
         } else {
             tieneMisiles = true
         }
-    }}
+    }
 }
 
 object contenedorPortuario {
@@ -95,7 +96,7 @@ object residuosRadioactivos {
 }
 
 object embalajeDeSeguridad {
-    var objeto = khinghtRider
+    var objeto = bumblebee
     method peso() = objeto.peso()
     method cambiarObjeto(unObjeto){ objeto = unObjeto}
     method peligrosidad() = objeto.peligrosidad() / 2
