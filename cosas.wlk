@@ -37,6 +37,7 @@ object contenedorPortuario {
 
 object residuosRadioactivos {
     var peso = 0
+    
     method cambiarPeso(unPeso){
         peso = unPeso}
 
@@ -46,6 +47,7 @@ object residuosRadioactivos {
 object embalajeDeSegurdad {
     var objeto = khinghtRider
     method peso() = objeto.peso()
-    method embalar()
+    method cambiarObjeto(unObjeto){ objeto = unObjeto}
+    method peligrosidad() = objeto.peligrosidad() / 2
 
 }
