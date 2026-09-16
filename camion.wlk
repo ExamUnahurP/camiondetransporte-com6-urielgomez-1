@@ -1,3 +1,6 @@
 object camion {
     
 }
+object {
+    
+}
