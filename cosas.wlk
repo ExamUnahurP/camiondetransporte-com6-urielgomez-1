@@ -20,19 +20,69 @@ object robot {
 }
 
 object paqueteDeLadrillos {
-
+    var cantidadDeLadrillos = 1
+  method peso() = cantidadDeLadrillos * 2
+  method peligrosidad(){
+    return 2
+  }
+  method cambiarCantidadLadrillos(cantidad){
+    cantidadDeLadrillos = cantidad
+  }
 }
 
 object arenaAGranel {
-
+    var peso = 1
+    method peso() = peso
+    method peligrosidad(){
+        return 1
+    }
+    method cambiarPeso(nuevoPeso){
+        peso = nuevoPeso
+    }
 }
 
 object bateriaAntiaerea {
-
+    var tieneMisiles = false
+    method peso(){
+        if(tieneMisiles){
+            return 300
+        } else {
+            return 200
+        }
+    }
+    method peligrosidad(){
+        if(tieneMisiles){
+            return 100
+        } else {
+            return 0
+        }
+    method cambiarEstadoMisiles(){
+        if(tieneMisiles){
+            tieneMisiles = false
+        } else {
+            tieneMisiles = true
+        }
+    }}
 }
 
 object contenedorPortuario {
-
+    const contenido = []
+    method peso(){
+        return 100 + contenido.sum({c => c.peso()})
+    }
+    method peligrosidad(){
+        if(contenido.isEmpty()){
+            return 0
+        }else{
+        return contenido.max({c => c.peligrosidad()})
+        }
+    }
+    method agregarContenido(unContenido){
+        contenido.add(unContenido)
+    }
+    method quitarContenido(unContenido){
+        contenido.remove(unContenido)
+    }
 }
 
 object residuosRadioactivos {
