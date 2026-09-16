@@ -13,4 +13,12 @@ object arenaAGranel {
 object bateriaAntiaerea {
 
 }
-object 
+object contenedorPortuario {
+
+}
+object residuosRadioactivos {
+
+}
+object embalajeDeSegurdad {
+    
+}

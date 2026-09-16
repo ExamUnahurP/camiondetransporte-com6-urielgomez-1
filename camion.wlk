@@ -1,6 +1,4 @@
 object camion {
-    
-}
-object {
+    const carga = []
     
 }
