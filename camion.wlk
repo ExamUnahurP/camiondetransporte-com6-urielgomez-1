@@ -29,7 +29,11 @@ object camion {
     }
 
     method estaExcedido () {
-        return camion.sum({c => c.peso({}}) > 2500 
+        return carga.sum({c => c.peso()}) > 2500 
     }
 
-}
+    method puedeCircularEnRuta (unaPeligrosidad) {
+        return  not self.estaExcedido() and not carga.nivelDePeligrosidadMayorA(unaPeligrosidad)
+    }
+
+}   
